@@ -1,31 +1,3 @@
-# Sokoban-Game
-Mi juego de Sokoban (Implementación de Sokoban Retro en Python)
-
-"""
-Markdown
-1.Objetivo: acomodar cajas en un punto de terminante
-2.Elementos del juego: 0.-Personaje
-                       1.-Cajas
-                       2.-Metas
-                       3.-Paredes
-                       4.-Espacios/Pisos
-
-*Niveles de juego 1 a N
-
-3.-Reglas a mecanica del juego:
-
-Empujar 1 caja 
-
-1.-Moverse hacia arriba sobre piso #MOVERSE CON ESPACIO#
-2.-Moverse hacia abajo sobre piso #MOVERSE CON ESPACIO#
-3.-Moverse hacia derecha sobre piso #MOVERSE CON ESPACIO#
-4.-Moverse hacia izquierda sobre piso
-5.-Reiniciar nivel
-6.-Empujar 1 caja hacia arriba y que adelante este 1 piso #MOVERSE CON CAJA Y ESPACIO#
-7.-Empujar 1 caja hacia abajo y que adelante este 1 piso #MOVERSE CON CAJA Y ESPACIO#
-"""
-
-
 # Sokoban
 
 ## 0. Objetivos
@@ -43,9 +15,13 @@ El juego Sokoban consiste en acomodar cajas en puntos determinados por las metas
 
 ## 2. Elementos del juego
 
+# 2.0 Mapa de juego
+
 Cada elemento  del juego sera colocado dentro de un array bidimensional, colocando numeros para representar los elementos del juego. A continuacion se muestra un ejemplo del mapa  (array bidimensional).
 
 [3, 4, 4, 0, 1, 4, 4, 3]
+
+## Lista de elementos
 
 - 0 - Personaje
 - 1 - Cajas
@@ -70,3 +46,4 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 |-----|-----------|-----------------|--------|-------|--------|
 |  1  | Izquierda | personaje, piso | [0,4]  | [4,0] | Done   |
 |  2  | Derecha   | piso, personaje | [4,0]  | [0,4] | Done   |
+
