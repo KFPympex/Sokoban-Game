@@ -54,9 +54,9 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 5. | Personaje, pasillo  | Por hacer | [0,4] | [4,0] | - |
-| 6. | Personaje, meta  | Por hacer | [0,2] | [4,6] |- |
-| 7. | Personaje, caja, pasillo | Por hacer | [0,1,4] | [4,0,1] | - |
+| 5. | Personaje, pasillo  | Echo | [0,4] | [4,0] | 5/3/24 |
+| 6. | Personaje, meta  | Por hacer | [0,2] | [4,6] | - |
+| 7. | Personaje, caja, pasillo | Echo | [0,1,4] | [4,0,1] | 5/3/24 |
 | 8. | Personaje, caja,  meta | Por hacer | [0,1,2] | [4,0,6] | - |
 | 9. | Personaje, caja_meta, pasillo | Por hacer | [0,6,4] | [4,5,1] | - |
 | 10. |Personaje, caja_meta, meta | Por hacer | [0,6,2] | [4,5,6] | - |
@@ -64,14 +64,14 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 | 12. | Personaje_meta, meta | Por hacer | [5,2] | [2,5] | - |
 | 13. | Personaje_meta, caja, pasillo | Por hacer | [5,1,4] | [2,0,1] | - |
 | 14. | Personaje_meta, caja, meta | Por hacer | [5,1,2] | [2,0,6] | - | 
-| 15. | Personaje_meta, caja_meta, pasillo | Por hacer | [5,6,4] | [2,5,1] | - |#
+| 15. | Personaje_meta, caja_meta, pasillo | Por hacer | [5,6,4] | [2,5,1] | - |
 | 16. | Personaje_meta, caja_meta, meta | Por hacer | [5,6,2] | [2,5,6] | - |
 
 ## Izquierda
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 17. | Personaje y espacio | Por hacer | [4,0] | [0,4] | - |
+| 17. | Personaje y espacio | Echo | [4,0] | [0,4] | 5/3/24 |
 | 18. | Personaje y meta | Por hacer | [2,0] | [6,4] | - |
 | 19. | Personaje, caja y espacio | Por hacer | [4,1,0] | [1,0,4] | - |
 | 20. | Personaje, caja y meta | Por hacer | [2,1,0] | [6,0,4] | - |
@@ -86,10 +86,10 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 
 ## Arriba
 
-| No. | Función | Kanban | Fecha terminación |
-| --- | --- | --- | --- |
-| 29. | Personaje y espacio | Por hacer | [] | [] | - |
-| 30. | Personaje y meta | Por hacer | - |
+| No. | Función | Kanban | Inicio | Fin | Fecha terminación |
+| --- | --- | --- | --- | --- | --- |
+| 29. | Personaje y espacio | Echo | [4,0] | [0,4] | 5/3/24 |
+| 30. | Personaje y meta | Por hacer | [] | [] | - | 
 | 31. | Personaje, caja y espacio | Por hacer | [] | [] | - |
 | 32. | Personaje, caja y meta | Por hacer | [] | [] | - |
 | 33. | Personaje, caja_meta y espacio | Por hacer | [] | [] | - |
@@ -105,17 +105,17 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 
 | No. | Función | Kanban | Fecha terminación |
 | --- | --- | --- | --- |
-| 41. | Personaje y espacio | Por hacer | [] | [] | - |
-| 42. | Personaje y meta | Por hacer | [] | [] | - |
-| 43. | Personaje, caja y espacio | Por hacer | [] | [] | - |
-| 44. | Personaje, caja y meta | Por hacer | [] | [] | - |
-| 45. | Personaje, caja_meta y espacio | Por hacer | [] | [] | - |
-| 46. | Personaje, caja_meta y meta | Por hacer | [] | [] | - |
-| 47. | Personaje_meta y espacio | Por hacer | [] | [] | - |
-| 48. | Personaje_meta y meta | Por hacer | [] | [] | - |
-| 49. | Personaje_meta, caja y espacio | Por hacer | [] | [] | - |
-| 50. | Personaje_meta, caja y meta | Por hacer | [] | [] | - |
-| 51. | Personaje_meta, caja_meta y espacio | Por hacer | [] | [] | - |
+| 41. | Personaje y espacio | Echo | [0,4] | [4,0] | 5/3/24 |
+| 42. | Personaje y meta | Por hacer | [0,2] | [4,6] | - |
+| 43. | Personaje, caja y espacio | Por hacer | [0,1,4] | [4,0,1] | - |
+| 44. | Personaje, caja y meta | Por hacer | [0,1,2] | [4,0,6] | - |
+| 45. | Personaje, caja_meta y espacio | Por hacer | [0,6,4] | [4,5,1] | - |
+| 46. | Personaje, caja_meta y meta | Por hacer | [0,6,2] | [4,5,6] | - |
+| 47. | Personaje_meta y espacio | Por hacer | [5,4] | [2,0] | - |
+| 48. | Personaje_meta y meta | Por hacer | [5,2] | [2,5] | - |
+| 49. | Personaje_meta, caja y espacio | Por hacer | [5,1,4] | [2,0,1] | - |
+| 50. | Personaje_meta, caja y meta | Por hacer | [5,1,2] | [2,0,6] | - |
+| 51. | Personaje_meta, caja_meta y espacio | Por hacer | [5,6,4] | [2,5,1] | - |
 | 52. | Personaje_meta, caja_meta y meta | Por hacer | [] | [] | - |
 
 ## Determina si se completo el nivel o no
@@ -130,6 +130,8 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 | No. | Función | Kanban | Fecha terminación |
 | --- | --- | --- | --- |
 | 55. | Función adicional o powerup (descripción). | Por hacer | - |
+
+
 
 
 
