@@ -16,12 +16,13 @@ class Soko:
 
     def __init__(self):
         # Define el mapa de juego
-        self.mapa =[
+        self.mapa0 =[
             [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
             [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,0,4,4,4,4,4,4,4,4,4,4,3],
+            [3,4,4,0,4,1,4,2,4,2,4,4,4,4,3],
             [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,4,1,1,4,2,2,2,4,4,4,4,3],
+            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
+            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
             [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
             [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
             [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
@@ -726,39 +727,109 @@ class Soko:
 
 ########################## MOVIMIENTO EXTRA ARRIBA
         
-    # Movimiento extra izquierda 81: [] -> []
-        
+    # Movimiento extra arriba 81: [4,1,1,0] -> [1,1,0,4]
+    def movimiento81(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1  
 
-    # Movimiento extra izquierda 82: [] -> []
-        
+    # Movimiento extra arriba 82: [4,6,1,0] -> [1,6,0,4]
+    def movimiento82(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1    
 
-    # Movimiento extra izquierda 83: [] -> []
-        
+    # Movimiento extra arriba 83: [2,1,1,0] -> [6,1,0,4]
+    def movimiento83(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 6
+        self.personaje_fila-=1    
 
-    # Movimiento extra izquierda 84: [] -> []
-        
+    # Movimiento extra arriba 84: [2,1,6,0] -> [6,1,5,4]
+    def movimiento84(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 6
+        self.personaje_fila-=1    
 
-    # Movimiento extra izquierda 85: [] -> []
-        
+    # Movimiento extra arriba 85: [2,6,1,0] -> [6,6,0,4]
+    def movimiento85(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 6
+        self.personaje_fila-=1    
 
-    # Movimiento extra izquierda 86: [] -> []
-        
+    # Movimiento extra arriba 86: [4,6,6,0] -> [1,6,5,4]
+    def movimiento86(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1    
 
-    # Movimiento extra izquierda 87: [] -> []
-        
+    # Movimiento extra arriba 87: [4,1,6,5] -> [1,1,5,2]
+    def movimiento87(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1    
 
-    # Movimiento extra izquierda 88: [] -> []
-        
+    # Movimiento extra arriba 88: [4,1,1,5] -> [1,1,0,2]
+    def movimiento88(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1    
 
-    # Movimiento extra izquierda 89: [] -> []
-        
+    # Movimiento extra arriba 89: [4,6,1,5] -> [1,6,0,2]
+    def movimiento89(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1    
     
-    # Movimiento extra izquierda 92: [] -> []
-        
+    # Movimiento extra arriba 90: [4,1,6,0] -> [1,1,5,4]
+    def movimiento90(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1    
 
-    # Movimiento extra izquierda 91: [] -> []
+    # Movimiento extra arriba 91: [2,6,6,0] -> [6,6,5,4]
+    def movimiento91(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 6
+        self.personaje_fila-=1    
 
+    # Movimiento extra arriba 92: [4,6,6,5] -> [1,6,5,2]
+    def movimiento92(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1    
 
+    # Movimiento extra arriba 93: [4,1,6,5] -> [1,1,5,2]
+    def movimiento93(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila - 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila - 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila - 3][self.personaje_columna] = 1
+        self.personaje_fila-=1
 
 
 
@@ -811,8 +882,64 @@ class Soko:
         
         # Movimiento 40: [2,6,5] ->	[6,5,2]	
         elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 2: 
-             self.movimiento40()        
+             self.movimiento40()     
 
+
+
+########################## MOVIMIENTO EXTRA ARRIBA
+        
+        # Movimiento extra arriba 81: [4,1,1,0] -> [1,1,0,4]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento81()
+
+
+        # Movimiento extra arriba 82: [4,6,1,0] -> [1,6,0,4]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento82()
+
+        # Movimiento extra arriba 83: [2,1,1,0] -> [6,1,0,4]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 2:
+             self.movimiento83()
+
+        # Movimiento extra arriba 84: [2,1,6,0] -> [6,1,5,4]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 2:
+             self.movimiento84()
+
+        # Movimiento extra arriba 85: [2,6,1,0] -> [6,6,0,4]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 2:
+             self.movimiento85()
+
+        # Movimiento extra arriba 86: [4,6,6,0] -> [1,6,5,4]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento86()
+
+        # Movimiento extra arriba 87: [4,1,6,5] -> [1,1,5,2]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento87()
+
+        # Movimiento extra arriba 88: [4,1,1,5] -> [1,1,0,2]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento88()
+
+        # Movimiento extra arriba 89: [4,6,1,5] -> [1,6,0,2]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento89()
+    
+        # Movimiento extra arriba 90: [4,1,6,0] -> [1,1,5,4]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento90()
+
+        # Movimiento extra arriba 91: [2,6,6,0] -> [6,6,5,4]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 2:
+             self.movimiento91()
+
+        # Movimiento extra arriba 92: [4,6,6,5] -> [1,6,5,2]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento92()
+
+        # Movimiento extra arriba 93: [4,1,6,5] -> [1,1,5,2]   
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila - 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila - 3][self.personaje_columna] == 4:
+             self.movimiento93()
 
     
 
@@ -903,6 +1030,111 @@ class Soko:
         self.mapa[self.personaje_fila + 2][self.personaje_columna] = 6
         self.personaje_fila+=1
 
+################ MOVIMIENTOS EXTRA ABAJO
+
+    # Movimiento extra abajo 94: [0,1,1,4] -> [4,0,1,1]  
+    def movimiento94(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 95: [0,1,6,4] -> [4,0,6,1]
+    def movimiento95(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 96: [0,1,1,2] -> [4,0,1,6]
+    def movimiento96(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 6
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 97: [0,6,1,2] -> [4,5,1,6]
+    def movimiento97(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 6
+        self.personaje_fila+=1    
+    
+    # Movimiento extra abajo 98: [0,1,6,2] -> [4,0,6,6]
+    def movimiento98(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 6
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 99: [0,6,6,4] -> [4,5,6,1]
+    def movimiento99(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 100: [5,6,1,4] -> [2,5,1,1]
+    def movimiento100(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 101: [5,1,1,4] -> [2,0,1,1]
+    def movimiento101(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 102: [5,1,6,4] -> [2,0,6,1]
+    def movimiento102(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 0
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 103: [0,6,1,4] -> [4,5,1,1]
+    def movimiento103(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 104: [0,6,6,2] -> [4,5,6,6]
+    def movimiento104(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 4
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 6
+        self.personaje_fila+=1    
+    
+    # Movimiento extra abajo 105: [5,6,6,4] -> [2,5,6,1]
+    def movimiento105(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 6
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1    
+
+    # Movimiento extra abajo 106: [5,6,1,4] -> [2,5,1,1]
+    def movimiento106(self):
+        self.mapa[self.personaje_fila][self.personaje_columna] = 2
+        self.mapa[self.personaje_fila + 1][self.personaje_columna] = 5
+        self.mapa[self.personaje_fila + 2][self.personaje_columna] = 1
+        self.mapa[self.personaje_fila + 3][self.personaje_columna] = 1
+        self.personaje_fila+=1
 
 
 
@@ -958,6 +1190,60 @@ class Soko:
         elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 2: 
              self.movimiento52()
 
+
+################ MOVIMIENTOS EXTRA ABAJO
+
+        # Movimiento extra abajo 94: [0,1,1,4] -> [4,0,1,1]  
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento94()
+
+        # Movimiento extra abajo 95: [0,1,6,4] -> [4,0,6,1]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento95()
+
+        # Movimiento extra abajo 96: [0,1,1,2] -> [4,0,1,6]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 2:
+             self.movimiento96()
+
+        # Movimiento extra abajo 97: [0,6,1,2] -> [4,5,1,6]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 2:
+             self.movimiento97()
+    
+        # Movimiento extra abajo 98: [0,1,6,2] -> [4,0,6,6]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 2:
+             self.movimiento98()
+
+        # Movimiento extra abajo 99: [0,6,6,4] -> [4,5,6,1]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento99()
+
+        # Movimiento extra abajo 100: [5,6,1,4] -> [2,5,1,1]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento100()
+
+        # Movimiento extra abajo 101: [5,1,1,4] -> [2,0,1,1]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento101()
+
+        # Movimiento extra abajo 102: [5,1,6,4] -> [2,0,6,1]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento102()
+
+        # Movimiento extra abajo 103: [0,6,1,4] -> [4,5,1,1]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento103()
+
+        # Movimiento extra abajo 104: [0,6,6,2] -> [4,5,6,6]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 2:
+             self.movimiento104()
+    
+        # Movimiento extra abajo 105: [5,6,6,4] -> [2,5,6,1]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento105()
+
+        # Movimiento extra abajo 106: [5,6,1,4] -> [2,5,1,1]
+        elif self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 6 and self.mapa[self.personaje_fila + 2][self.personaje_columna] == 1 and self.mapa[self.personaje_fila + 3][self.personaje_columna] == 4:
+             self.movimiento106()
 
 
 
