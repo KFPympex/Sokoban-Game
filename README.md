@@ -42,10 +42,10 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 0. | Cargar el siguiente nivel. | Por hacer | - | - | - | 
-| 1. | Repetir el juego hasta terminar el nivel. | Por hacer | - | -  | - |
+| 0. | Cargar el siguiente nivel. | Hecho | - | - | 4/4/24 | 
+| 1. | Repetir el juego hasta terminar el nivel. | Hecho | - | -  | 5/4/24 |
 | 2. | Imprimir mapa.| Hecho | - | - | 29/2/24 |
-| 3. | Leer el movimiento. | Por hacer | - | - | - |
+| 3. | Leer el movimiento. | Hecho | - | - | 29/2/24 |
 | 4. | Evaluar el movimiento del usuario. | Por hacer | - | - | - |
 
 ## Derecha
@@ -120,8 +120,8 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 53. | Evaluar si el nivel esta terminado.  | Por hacer | - | - | - |
-| 54. | Si el nivel esta terminado cargar el siguiente nivel.  | Por hacer | - | - | - |
+| 53. | Evaluar si el nivel esta terminado.  | Hecho | - | - | 4/4/24 |
+| 54. | Si el nivel esta terminado cargar el siguiente nivel.  | Hecho | - | - | 4/4/24 |
 
 
 
@@ -172,41 +172,35 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 
 | No. | Función | Kanban |  Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 81. | Personaje, caja, caja y espacio | Hecho | [4,1,1,0] | [1,1,0,4] | - |
-| 82. | Personaje, caja, caja_meta y espacio | Hecho | [4,6,1,0] | [1,6,0,4] | - |
-| 83. | Personaje, caja, caja y meta | Hecho | [2,1,1,0] | [6,1,0,4] | - |
-| 84. | Personaje, caja_meta, caja y meta | Hecho | [2,1,6,0] | [6,1,5,4] | - |
-| 85. | Personaje, caja, caja_meta y meta | Hecho | [2,6,1,0] | [6,6,0,4] | - |
-| 86. | Personaje, caja_meta, caja_meta y espacio | Hecho | [4,6,6,0] | [1,6,5,4] | - |
-| 87. | Personaje_meta, caja_meta, caja y espacio | Hecho | [4,1,6,5] | [1,1,5,2] | - |
+| 81. | Personaje, caja, caja y espacio | Hecho | [4,1,1,0] | [1,1,0,4] | 20/3/24 |
+| 82. | Personaje, caja, caja_meta y espacio | Hecho | [4,6,1,0] | [1,6,0,4] | 20/3/24 |
+| 83. | Personaje, caja, caja y meta | Hecho | [2,1,1,0] | [6,1,0,4] | 20/3/24 |
+| 84. | Personaje, caja_meta, caja y meta | Hecho | [2,1,6,0] | [6,1,5,4] | 20/3/24 |
+| 85. | Personaje, caja, caja_meta y meta | Hecho | [2,6,1,0] | [6,6,0,4] | 20/3/24 |
+| 86. | Personaje, caja_meta, caja_meta y espacio | Hecho | [4,6,6,0] | [1,6,5,4] | 20/3/24 |
+| 87. | Personaje_meta, caja_meta, caja y espacio | Hecho | [4,1,6,5] | [1,1,5,2] | 20/3/24 |
 | 88. | Personaje_meta, caja, caja y espacio | Hecho | [4,1,1,5] | [1,1,0,2] | - |
-| 89. | Personaje_meta, caja, caja_meta y espacio | Hecho | [4,6,1,5] | [1,6,0,2] | - |
-| 90. | Personaje, caja_meta, caja y espacio | Hecho | [4,1,6,0] | [1,1,5,4] | - |
-| 91. | Personaje, caja_meta, caja_meta y meta | Hecho | [2,6,6,0] | [6,6,5,4] | - |
-| 92. | Personaje_meta, caja_meta, caja_meta y espacio | Hecho | [4,6,6,5] | [1,6,5,2] | - |
-| 93. | Personaje_meta, caja_meta, caja, espacio | Hecho | [4,1,6,5] | [1,1,5,2] | - |
+| 89. | Personaje_meta, caja, caja_meta y espacio | Hecho | [4,6,1,5] | [1,6,0,2] | 20/3/24 |
+| 90. | Personaje, caja_meta, caja y espacio | Hecho | [4,1,6,0] | [1,1,5,4] | 20/3/24 |
+| 91. | Personaje, caja_meta, caja_meta y meta | Hecho | [2,6,6,0] | [6,6,5,4] | 20/3/24 |
+| 92. | Personaje_meta, caja_meta, caja_meta y espacio | Hecho | [4,6,6,5] | [1,6,5,2] | 20/3/24 |
+| 93. | Personaje_meta, caja_meta, caja, espacio | Hecho | [4,1,6,5] | [1,1,5,2] | 20/3/24 |
 
 ## Funcion extra abajo
 
 | No. | Función | Kanban |  Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 94. | Personaje, caja, caja y espacio | Hecho | [0,1,1,4] | [4,0,1,1] | - |
-| 95. | Personaje, caja, caja_meta y espacio | Hecho | [0,1,6,4] | [4,0,6,1] | - |
-| 96. | Personaje, caja, caja y meta | Hecho | [0,1,1,2] | [4,0,1,6] | - |
-| 97. | Personaje, caja_meta, caja y meta | Hecho | [0,6,1,2] | [4,5,1,6] | - |
-| 98. | Personaje, caja, caja_meta y meta | Hecho | [0,1,6,2] | [4,0,6,6] | - |
-| 99. | Personaje, caja_meta, caja_meta y espacio | Hecho | [0,6,6,4] | [4,5,6,1] | - |
-| 100. | Personaje_meta, caja_meta, caja y espacio | Hecho | [5,6,1,4] | [2,5,1,1] | - |
-| 101. | Personaje_meta, caja, caja y espacio | Hecho | [5,1,1,4] | [2,0,1,1] | - |
-| 102. | Personaje_meta, caja, caja_meta y espacio | Hecho | [5,1,6,4] | [2,0,6,1] | - |
-| 103. | Personaje, caja_meta, caja y espacio | Hecho | [0,6,1,4] | [4,5,1,1] | - |
-| 104. | Personaje, caja_meta, caja_meta y meta | Hecho | [0,6,6,2] | [4,5,6,6] | - |
-| 105. | Personaje_meta, caja_meta, caja_meta y espacio | Hecho | [5,6,6,4] | [2,5,6,1] | - |
-| 106. | Personaje_meta, caja_meta, caja, espacio | Hecho | [5,6,1,4] | [2,5,1,1] | - |
-
-
-
-
-
-
+| 94. | Personaje, caja, caja y espacio | Hecho | [0,1,1,4] | [4,0,1,1] | 20/3/24 |
+| 95. | Personaje, caja, caja_meta y espacio | Hecho | [0,1,6,4] | [4,0,6,1] | 20/3/24 |
+| 96. | Personaje, caja, caja y meta | Hecho | [0,1,1,2] | [4,0,1,6] | 20/3/24 |
+| 97. | Personaje, caja_meta, caja y meta | Hecho | [0,6,1,2] | [4,5,1,6] | 20/3/24 |
+| 98. | Personaje, caja, caja_meta y meta | Hecho | [0,1,6,2] | [4,0,6,6] | 20/3/24 |
+| 99. | Personaje, caja_meta, caja_meta y espacio | Hecho | [0,6,6,4] | [4,5,6,1] | 20/3/24 |
+| 100. | Personaje_meta, caja_meta, caja y espacio | Hecho | [5,6,1,4] | [2,5,1,1] | 20/3/24 |
+| 101. | Personaje_meta, caja, caja y espacio | Hecho | [5,1,1,4] | [2,0,1,1] | 20/3/24 |
+| 102. | Personaje_meta, caja, caja_meta y espacio | Hecho | [5,1,6,4] | [2,0,6,1] | 20/3/24 |
+| 103. | Personaje, caja_meta, caja y espacio | Hecho | [0,6,1,4] | [4,5,1,1] | 20/3/24 |
+| 104. | Personaje, caja_meta, caja_meta y meta | Hecho | [0,6,6,2] | [4,5,6,6] | 20/3/24 |
+| 105. | Personaje_meta, caja_meta, caja_meta y espacio | Hecho | [5,6,6,4] | [2,5,6,1] | 20/3/24 |
+| 106. | Personaje_meta, caja_meta, caja, espacio | Hecho | [5,6,1,4] | [2,5,1,1] | 20/3/24 |
 
