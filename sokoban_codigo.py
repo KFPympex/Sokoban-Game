@@ -1,42 +1,109 @@
+import copy
 class Soko:
 
-    mapa = [] # mapa del juego
-    personaje_columna = 0
-    personaje_fila = 0
+    def __init__(self, nivel=0):
+        self.niveles = [
+            [  # Nivel 0
+                [3,3,3,3,3,3,3],
+                [3,4,1,4,2,2,3],
+                [3,4,1,4,3,2,3],
+                [3,4,3,4,1,4,3],
+                [3,0,4,4,4,4,3],
+                [3,3,3,3,3,3,3]
+            ],
+            [  # Nivel 1
+                [3,3,3,3,3,3,3,3,3],
+                [3,4,4,4,3,4,4,4,3],
+                [3,4,1,0,4,1,2,4,3],
+                [3,4,4,3,2,3,4,4,3],
+                [3,3,3,4,1,4,4,4,3],
+                [3,4,2,4,4,4,3,3,3],
+                [3,4,4,4,3,4,4,4,3],
+                [3,3,3,3,3,3,3,3,3]
+            
+            ],
+            [  # Nivel 2
+                [3,3,3,3,3,3,3,3,3,3,3,3,3],
+                [3,4,4,4,4,4,4,4,4,4,4,4,3],
+                [3,4,4,4,4,4,4,4,4,1,4,4,3],
+                [3,4,4,4,4,4,4,4,4,4,4,4,3],
+                [3,4,4,4,1,4,4,4,2,2,4,4,3],
+                [3,4,4,1,4,4,4,4,2,2,4,4,3],
+                [3,4,0,4,4,1,4,4,4,4,4,4,3],
+                [3,4,4,4,4,4,4,4,4,4,4,4,3],
+                [3,3,3,3,3,3,3,3,3,3,3,3,3]
+            ],
+            [  # Nivel 3
+                [3,3,3,3,3,3,3,3,3,3,3],
+                [3,4,4,4,4,0,4,4,4,4,3],
+                [3,4,1,4,3,3,3,4,1,4,3],
+                [3,4,4,4,3,2,3,4,4,4,3],
+                [3,3,4,4,4,2,4,4,4,3,3],
+                [3,4,4,4,4,2,3,4,4,4,3],
+                [3,4,1,4,3,3,3,4,4,4,3],
+                [3,4,4,4,4,4,4,4,4,4,3],
+                [3,3,3,3,3,3,3,3,3,3,3]
+            ],
+            [  # Nivel 4
+                [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
+                [3,4,4,4,4,3,4,4,4,4,4,4,4,4,3],
+                [3,4,1,3,4,3,0,3,4,3,1,4,3,4,3],
+                [3,4,4,3,4,4,4,4,4,3,4,4,3,4,3],
+                [3,3,4,3,3,3,2,3,3,3,4,3,3,4,3],
+                [3,4,4,4,4,4,2,4,4,4,4,4,4,4,3],
+                [3,4,1,3,4,4,2,3,4,3,4,4,3,4,3],
+                [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
+                [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
+            ]
 
-
-    # 0 - Personaje
-    # 1 - Cajas
-    # 2 - Metas
-    # 3 - Paredes
-    # 4 - Piso
-    # 5 - Personaje_meta
-    # 6 - Caja_meta
-
-
-    def __init__(self):
-        # Define el mapa de juego
-        self.mapa0 =[
-            [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,0,4,1,4,2,4,2,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,4,4,4,4,4,4,4,4,4,4,4,4,4,3],
-            [3,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
         ]
+        self.cargar_nivel(nivel)
+    
+    
 
-        # Definimos la posicion inicial del personaje
-        self.personaje_columna = 3
-        self.personaje_fila = 2
+    def cargar_nivel(self, nivel):
+        self.mapa = copy.deepcopy(self.niveles[nivel])  # Usa deepcopy para crear una copia del nivel
+        self.nivel_actual = nivel
+        for fila in range(len(self.mapa)):
+            for columna in range(len(self.mapa[fila])):
+                if self.mapa[fila][columna] == 0:
+                    self.personaje_fila = fila
+                    self.personaje_columna = columna
+
+    def nivel_completado(self):
+        for fila in self.mapa:
+            if 1 in fila:  # Si hay alguna caja que no esté en una meta
+                return False
+        return True
 
     def imprimirMapa(self):
-        for filas in self.mapa:
-            print(filas)
+        representacion = {
+        0: "🧍",  # Personaje
+        1: "📦",  # Caja
+        2: "🏁",  # Meta
+        3: "🧱",  # Pared
+        4: "  ",  # Espacio en blanco
+        5: "🕺",  # Personaje en la meta (opcional, dependiendo de tu lógica)
+        6: "🎁",  # Caja en la meta (opcional, dependiendo de tu lógica)
+    }
+        for fila in self.mapa:
+            for celda in fila:
+                print(representacion.get(celda, " "), end=" ")
+            print()
+    
 
+    def mover(self, df, dc):
+        # Mover el personaje. Implementación básica, necesita ajustes según las reglas del juego.
+        nueva_fila = self.personaje_fila + df
+        nueva_columna = self.personaje_columna + dc
+        if self.mapa[nueva_fila][nueva_columna] in [4, 2]:  # Mover a piso o meta
+            self.mapa[self.personaje_fila][self.personaje_columna] = 4  # Dejar el piso donde estaba el personaje
+            self.personaje_fila = nueva_fila
+            self.personaje_columna = nueva_columna
+            self.mapa[nueva_fila][nueva_columna] = 0  # Colocar al personaje en la nueva posición
+
+
+    
 ## Mover derecha
             
     # Movimiento 5: [0,4] -> [4,0]
@@ -230,6 +297,11 @@ class Soko:
 
     
     def derecha(self):
+
+        nueva_fila = self.personaje_fila
+        nueva_columna = self.personaje_columna + 1  # Mover a la derecha incrementa la columna
+        print(f"Moviendo a: [{nueva_fila}, {nueva_columna}]")
+
         # Movimiento 5: [0,4] -> [4,0]
         if self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila][self.personaje_columna + 1] == 4:
             self.movimiento5()
@@ -531,6 +603,11 @@ class Soko:
     
 
     def izquierda(self):
+
+        nueva_fila = self.personaje_fila
+        nueva_columna = self.personaje_columna - 1  # Mover a la izquierda disminuye la columna
+        print(f"Moviendo a: [{nueva_fila}, {nueva_columna}]")
+
         # Movimiento 17: [4,0] -> [0,4]
         if self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila][self.personaje_columna - 1] == 4:
             self.movimiento17() 
@@ -835,6 +912,11 @@ class Soko:
 
 
     def arriba(self):
+
+        nueva_fila = self.personaje_fila - 1  # Mover hacia arriba disminuye la fila
+        nueva_columna = self.personaje_columna
+        print(f"Moviendo a: [{nueva_fila}, {nueva_columna}]")
+
         # Movimiento 29: [4,0] -> [0,4]
         if self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila - 1][self.personaje_columna] == 4:
             self.movimiento29()        
@@ -1141,6 +1223,11 @@ class Soko:
 
 
     def abajo(self):
+
+        nueva_fila = self.personaje_fila + 1  # Mover hacia abajo aumenta la fila
+        nueva_columna = self.personaje_columna
+        print(f"Moviendo a: [{nueva_fila}, {nueva_columna}]")
+
         # Movimiento 41: [0,4] -> [4,0]
         if self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila + 1][self.personaje_columna] == 4:
             self.movimiento41()         
@@ -1247,26 +1334,41 @@ class Soko:
 
 
 
-
     def jugar(self):
-        while True:
-            # Imprime el mapa
-            self.imprimirMapa()
-            # Pide al usuario el movimiento
-            movimiento = input("Selecciona el movimiento: ")
-            # Moverse a la derecha
-            if movimiento == 'd':
-                self.derecha()
-            if movimiento == 'a':
-                self.izquierda()
-            if movimiento == 'w':
-                self.arriba()
-            if movimiento == 's':
-                self.abajo()
-             
+        continuar_jugando = True
+        while continuar_jugando:
+            self.cargar_nivel(self.nivel_actual)  # Asegurarte de cargar el nivel al inicio de cada iteración
+            while True:
+                self.imprimirMapa()
+                movimiento = input("Selecciona el movimiento (w/a/s/d), 'r' para reiniciar: ")
+                if movimiento == 'd':
+                    self.derecha()
+                elif movimiento == 'a':
+                    self.izquierda()
+                elif movimiento == 'w':
+                    self.arriba()
+                elif movimiento == 's':
+                    self.abajo()
+                elif movimiento == 'r':  # Agregar esta opción para reiniciar el nivel actual
+                    print("Reiniciando nivel...")
+                    self.cargar_nivel(self.nivel_actual)
+                    continue
+
+                if self.nivel_completado():
+                    print("¡Nivel completado!")
+                    break  # Salir del bucle interno para preguntar al jugador qué hacer a continuación
+
+            # Preguntar al jugador qué hacer después de completar un nivel o decidir salir del bucle de movimiento
+            eleccion = input("Presiona 'n' para el siguiente nivel, 'r' para repetir, cualquier otra tecla para salir: ")
+            if eleccion == 'n' and self.nivel_actual + 1 < len(self.niveles):
+                self.nivel_actual += 1  # Preparar para cargar el siguiente nivel
+            elif eleccion != 'r':  # Si no se elige repetir, salir del juego
+                print("Juego terminado.")
+                continuar_jugando = False
+                    
             
 
+             
+# Crear una instancia del juego y ejecutar
 soko = Soko()
 soko.jugar()
-
-
