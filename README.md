@@ -46,7 +46,7 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 | 1. | Repetir el juego hasta terminar el nivel. | Hecho | - | -  | 5/4/24 |
 | 2. | Imprimir mapa.| Hecho | - | - | 29/2/24 |
 | 3. | Leer el movimiento. | Hecho | - | - | 29/2/24 |
-| 4. | Evaluar el movimiento del usuario. | Por hacer | - | - | - |
+| 4. | Evaluar el movimiento del usuario. | Hecho | - | - | 7/3/24 |
 
 ## Derecha
 
@@ -203,4 +203,3 @@ Para moverse en el juego el usuario utilizara elguna de las siguientes letras pa
 | 104. | Personaje, caja_meta, caja_meta y meta | Hecho | [0,6,6,2] | [4,5,6,6] | 20/3/24 |
 | 105. | Personaje_meta, caja_meta, caja_meta y espacio | Hecho | [5,6,6,4] | [2,5,6,1] | 20/3/24 |
 | 106. | Personaje_meta, caja_meta, caja, espacio | Hecho | [5,6,1,4] | [2,5,1,1] | 20/3/24 |
-
